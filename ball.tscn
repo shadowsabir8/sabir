@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bsb8sagdq82lw"]
+
+[ext_resource type="Texture2D" uid="uid://hllugg7j5ea5" path="res://lets-roll-assets/assets/textures/pixar-ball.png" id="1_41u45"]
+[ext_resource type="Script" uid="uid://tkkxjb1u4p1v" path="res://ball.gd" id="1_ktgx5"]
+[ext_resource type="ArrayMesh" uid="uid://ldnrq2ktjffh" path="res://lets-roll-assets/assets/models/pixar-ball.obj" id="2_ktgx5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c0ktc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c7nqt"]
+albedo_texture = ExtResource("1_41u45")
+roughness = 0.4
+
+[node name="ball" type="RigidBody3D" unique_id=745824314]
+process_mode = 3
+script = ExtResource("1_ktgx5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1001853765]
+shape = SubResource("SphereShape3D_c0ktc")
+
+[node name="ball" type="MeshInstance3D" parent="." unique_id=1346903495]
+material_override = SubResource("StandardMaterial3D_c7nqt")
+mesh = ExtResource("2_ktgx5")
+
+[node name="cam rig" type="Node3D" parent="." unique_id=296967238]
+
+[node name="Camera3D" type="Camera3D" parent="cam rig" unique_id=161483629]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 2.85, 3.5)
+current = true

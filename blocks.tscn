@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://8bv2w78acgsj"]
+
+[ext_resource type="PackedScene" uid="uid://c3pql0a8v85lo" path="res://lets-roll-assets/assets/models/blocks.gltf" id="1_hch05"]
+
+[node name="blocks" unique_id=733131572 instance=ExtResource("1_hch05")]
